@@ -4,7 +4,8 @@ import {catchError , map} from 'rxjs/operators';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import {PersonneService} from './app/services'
+import {PersonneService} from 'src/app/services/personne.service'
+import { Personne } from 'src/app/personne';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,12 +13,10 @@ import {PersonneService} from './app/services'
 })
 export class RegisterComponent {
   MemberForm : FormGroup ;
+  personne=new Personne();
   constructor(private formBuilder: FormBuilder, private PersonneService:PersonneService , private ngZone:NgZone,private router:Router) { }
   register(){
-  if(this.MemberForm.invalid)
-     {return;}
-     else{
-   this.PersonneService.register(this.MemberForm.value).subscribe(
+   this.PersonneService.register(this.personne).subscribe(
          (res)=>{ 
            console.log('Member successfully created')
            

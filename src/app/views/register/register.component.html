@@ -12,27 +12,27 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="icon-user"></i></span>
                   </div>
-                  <input type="text" class="form-control" placeholder="Username" autocomplete="username" required>
+                  <input type="text" class="form-control" placeholder="CIN" autocomplete="username" required [(ngModel)]="personne.cin" name="cin">
                 </div>
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text">@</span>
                   </div>
-                  <input type="text" class="form-control" placeholder="Email" autocomplete="email" required>
+                  <input type="text" class="form-control" placeholder="Email" autocomplete="email" required [(ngModel)]="personne.email" name="email">
                 </div>
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="icon-lock"></i></span>
                   </div>
-                  <input type="password" class="form-control" placeholder="Password" autocomplete="new-password" required>
+                  <input type="password" class="form-control" placeholder="Password" autocomplete="new-password" required [(ngModel)]="personne.mot_de_pasee" name="mot_de_pasee">
                 </div>
                 <div class="input-group mb-4">
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="icon-lock"></i></span>
                   </div>
-                  <input type="password" class="form-control" placeholder="Repeat password" autocomplete="new-password" required>
+                  <input type="text" class="form-control" placeholder="Role" autocomplete="email" required [(ngModel)]="personne.role" name="role" >
                 </div>
-                <button type="button" class="btn btn-block btn-success">Create Account</button>
+                <button type="button" class="btn btn-block btn-success" (click)="register()">Create Account</button>
               </form>
             </div>
             <div class="card-footer p-4">

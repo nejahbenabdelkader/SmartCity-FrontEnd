@@ -9,12 +9,12 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   providedIn: 'root'
 })
 export class PersonneService {
-  baseUrl = "http://localhost8083/api/v1/Personne"; 
+  baseUrl = "http://localhost:8083/api/v1/Personne/"; 
   constructor(private http: HttpClient,
     public router: Router) {
    }
-   CreatePersonne(data: any):Observable<any>{
-     return this.http.post(this.baseUrl + 'Personne', data);
+   register(data: any):Observable<any>{
+     return this.http.post(this.baseUrl , data);
 
 }
 }
