@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AddPersonneComponent } from './add-personne/add-personne.component';
+import { AppComponent } from './app.component';
 
 // Import Containers
 import { DefaultLayoutComponent } from './containers';
-import { DashboardComponent } from './views/dashboard/dashboard.component';
-
+import { PersonnedetailsComponent } from './personnedetails/personnedetails.component';
+import { UpdatePersonneComponent } from './update-personne/update-personne.component';
 import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
 import { LoginComponent } from './views/login/login.component';
@@ -86,12 +88,14 @@ export const routes: Routes = [
         loadChildren: () => import('./views/widgets/widgets.module').then(m => m.WidgetsModule)
       }
     ]
-  },
+  },{ path: 'updatepersonne/:id', component: UpdatePersonneComponent},
+  { path: 'detail/:id', component: PersonnedetailsComponent},
   { path: '**', component: P404Component },
-  //{path:'/home',component: DashboardComponent}
+
 ];
 
 @NgModule({
+  
   imports: [ RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }) ],
   exports: [ RouterModule ]
 })

@@ -1,0 +1,37 @@
+<div class="center"><h3>Update personne</h3>
+<div style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="name">Cin</label>
+        <input type="text" class="form-control" placeholder="CIN" autocomplete="username" required [(ngModel)]="personne.cin" name="cin">    </div>
+  
+      <div class="form-group">
+        <label for="name">Nom</label>
+        <input type="text" class="form-control" id="nom" required [(ngModel)]="personne.nom" name="nom">
+      </div>
+  
+      <div class="form-group">
+        <label for="name">Prenom</label>
+        <input type="text" class="form-control" id="prenom" required [(ngModel)]="personne.prenom" name="pernom">
+      </div>
+      <div class="form-group">
+        <label for="name">Email</label>
+        <input type="text" class="form-control" id="email" required [(ngModel)]="personne.email" name="email">
+      </div>
+      <div class="form-group">
+        <label for="name">mot de passe</label>
+        <input type="text" class="form-control" id="motdepasse" required [(ngModel)]="personne.mot_de_pasee" name="mot de passe">
+      </div>
+      <div class="form-group">
+        <label for="name">date_de_naissance</label>
+        <input type="text" class="form-control" id="date_de_naissance" required [(ngModel)]="personne.date_de_naissance" name="date de naissance">
+      </div>
+      <div class="form-group">
+        <label for="name">Role</label>
+        <input type="text" class="form-control" id="role" required [(ngModel)]="personne.role" name="role">
+      </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+</div>

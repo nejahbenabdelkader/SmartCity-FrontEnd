@@ -1,0 +1,35 @@
+<div class="center">
+  <h2>Personne Details</h2> 
+
+<hr/>
+<div *ngIf="personne">
+  <div>
+    <label><b>Cin: </b></label> {{personne.cin}}
+  </div>
+  <div>
+    <label><b>nom: </b></label> {{personne.nom}}
+  </div>
+  <div>
+    <label><b>pernom: </b></label> {{personne.pernom}}
+  </div> 
+  <div>
+    <label><b>date_de_naissance: </b></label> {{personne.date_de_naissance}}
+  </div> 
+  <div>
+    <label><b>email: </b></label> {{personne.email}}
+  </div>
+  <div>
+    <label><b>mot_de_passe: </b></label> {{personne.mot_de_passe}}
+  </div>
+  <div>
+    <label><b>role: </b></label> {{personne.role}}
+  </div> 
+  <div>
+    <label><b>numero: </b></label> {{personne.numero}}
+  </div>     
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to personne List</button><br>
+</div>

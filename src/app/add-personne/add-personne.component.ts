@@ -1,14 +1,15 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
-import { getStyle, rgbToHex } from '@coreui/coreui/dist/js/coreui-utilities';
-import { Personne } from 'src/app/personne';
-import { PersonneService } from 'src/app/services/personne.service';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Personne } from '../personne';
+import { PersonneService } from '../services/personne.service';
 
 @Component({
-  templateUrl: 'colors.component.html'
+  selector: 'app-add-personne',
+  templateUrl: './add-personne.component.html',
+  styleUrls: ['./add-personne.component.scss']
 })
-export class ColorsComponent implements OnInit {
+export class AddPersonneComponent implements OnInit {
+
   personne: Personne = new Personne();
   submitted = false;
   constructor(private Personneservice:PersonneService,private router: Router) {} 
@@ -32,11 +33,12 @@ export class ColorsComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-    this.personne.role="Employe";
     this.save();    
   }
 
   gotoList() {
-    this.router.navigate(['/dashboard']);
+    this.router.navigate(['/Personne']);
   }
 }
+ 
+

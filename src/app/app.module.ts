@@ -45,6 +45,9 @@ import { AppRoutingModule } from './app.routing';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
+import { AddPersonneComponent } from './add-personne/add-personne.component';
+import { PersonnedetailsComponent } from './personnedetails/personnedetails.component';
+import { UpdatePersonneComponent } from './update-personne/update-personne.component';
 
 @NgModule({
   imports: [
@@ -63,7 +66,8 @@ import { ChartsModule } from 'ng2-charts';
     IconModule,
     IconSetModule.forRoot(),
     HttpClientModule,
-    FormsModule,ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
     
   ],
   declarations: [
@@ -72,7 +76,10 @@ import { ChartsModule } from 'ng2-charts';
     P404Component,
     P500Component,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    AddPersonneComponent,
+    PersonnedetailsComponent,
+    UpdatePersonneComponent
   ],
   providers: [
     {

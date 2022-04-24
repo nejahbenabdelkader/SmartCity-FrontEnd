@@ -1,4 +1,4 @@
-<h3>Create empolyer</h3>
+<h3>Create personne</h3>
 <div [hidden]="submitted" style="width: 400px;">
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
@@ -26,14 +26,11 @@
       <label for="name">date_de_naissance</label>
       <input type="text" class="form-control" id="date_de_naissance" required [(ngModel)]="personne.date_de_naissance" name="date de naissance">
     </div>
-    <div class="form-group col-sm-6">
-      <label for="ccyear">Organisation</label>
-      <mat-select class="form-control" id="ccyear" ngModel name="organisation">
-        <option id="Poste">La Poste</option>
-        <option>Garde National</option>
-        <option>Hopital</option>
-      </mat-select>
+    <div class="form-group">
+      <label for="name">Role</label>
+      <input type="text" class="form-control" id="role" required [(ngModel)]="personne.role" name="role">
     </div>
+
 
     <button type="submit" class="btn btn-success">Submit</button>
   </form>

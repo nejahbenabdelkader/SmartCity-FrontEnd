@@ -9,5 +9,6 @@ export class Personne {
 	mot_de_pasee:any;
 	enabled:any;
 	token:any;
+	adress:any;
 	constructor(){}
 }

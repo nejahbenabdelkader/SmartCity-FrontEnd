@@ -15,12 +15,12 @@ export const navItems: INavData[] = [
     name: 'Theme'
   },
   {
-    name: 'Colors',
+    name: 'Ajouter Personne',
     url: '/theme/colors',
     icon: 'icon-drop'
   },
   {
-    name: 'Typography',
+    name: 'Tables Des Personnes',
     url: '/theme/typography',
     icon: 'icon-pencil'
   },
@@ -97,22 +97,22 @@ export const navItems: INavData[] = [
     ]
   },
   {
-    name: 'Buttons',
+    name: 'Rendez-vous',
     url: '/buttons',
     icon: 'icon-cursor',
     children: [
       {
-        name: 'Buttons',
+        name: 'Hospital',
         url: '/buttons/buttons',
         icon: 'icon-cursor'
       },
       {
-        name: 'Dropdowns',
+        name: 'Garde National',
         url: '/buttons/dropdowns',
         icon: 'icon-cursor'
       },
       {
-        name: 'Brand Buttons',
+        name: 'Ecole',
         url: '/buttons/brand-buttons',
         icon: 'icon-cursor'
       }
@@ -233,19 +233,4 @@ export const navItems: INavData[] = [
     },
     attributes: { disabled: true },
   },
-  {
-    name: 'Download CoreUI',
-    url: 'http://coreui.io/angular/',
-    icon: 'icon-cloud-download',
-    class: 'mt-auto',
-    variant: 'success',
-    attributes: { target: '_blank', rel: 'noopener' }
-  },
-  {
-    name: 'Try CoreUI PRO',
-    url: 'http://coreui.io/pro/angular/',
-    icon: 'icon-layers',
-    variant: 'danger',
-    attributes: { target: '_blank', rel: 'noopener' }
-  }
 ];

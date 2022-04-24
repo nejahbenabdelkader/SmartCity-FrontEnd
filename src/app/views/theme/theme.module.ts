@@ -7,11 +7,14 @@ import { TypographyComponent } from './typography.component';
 
 // Theme Routing
 import { ThemeRoutingModule } from './theme-routing.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
-    ThemeRoutingModule
+    ThemeRoutingModule,
+    FormsModule
+
   ],
   declarations: [
     ColorsComponent,
